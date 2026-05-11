@@ -798,4 +798,49 @@ input.answer-input:focus{
                 }
             });
         </script>
+<style>
+    #phunhuan-floating-nav {
+        position: fixed;
+        bottom: 25px;
+        right: 25px;
+        display: flex;
+        gap: 15px;
+        z-index: 99999;
+    }
+    .pn-btn {
+        padding: 12px 24px;
+        font-size: 16px;
+        font-family: 'Segoe UI', Arial, sans-serif;
+        font-weight: bold;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .pn-prev {
+        background-color: #ffffff;
+        color: #475569;
+        border: 2px solid #e2e8f0;
+    }
+    .pn-prev:hover {
+        background-color: #f8fafc;
+        transform: translateY(-2px);
+    }
+    .pn-next {
+        background-color: #2563eb;
+        color: #ffffff;
+        border: 2px solid #2563eb;
+    }
+    .pn-next:hover {
+        background-color: #1d4ed8;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(37,99,235,0.4);
+    }
+</style>
+
+<div id="phunhuan-floating-nav">
+    <button onclick="document.querySelector('.nav-prev')?.click()" class="pn-btn pn-prev">❮ Câu trước</button>
+    <button onclick="document.querySelector('.nav-next')?.click()" class="pn-btn pn-next">Câu tiếp ❯</button>
+</div>
         </body></html>

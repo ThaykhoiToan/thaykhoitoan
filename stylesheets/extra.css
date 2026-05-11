@@ -13,14 +13,32 @@
 .md-typeset h1 { font-size: 1.8rem; }
 .md-typeset h2 { font-size: 1.5rem; }
 
-/* Tăng tỷ lệ hiển thị cho toàn bộ công thức Toán */
+/* Ép công thức Toán tự động xuống dòng khi màn hình hẹp */
 mjx-container {
-  font-size: 100% !important; /* Thầy có thể tăng lên 130% nếu muốn to hơn nữa */
-  color: inherit;
+    display: inline-grid !important;
+    max-width: 100% !important;
+    overflow-x: auto !important; /* Tạo thanh cuộn riêng cho công thức nếu quá dài */
+    overflow-y: hidden !important;
+    white-space: normal !important;
+    transition: font-size 0.2s ease;
 }
 
-/* Căn chỉnh riêng cho công thức nằm trên cùng một dòng với văn bản */
-mjx-container[inline] {
-  margin-left: 0.25em;
-  margin-right: 0.25em;
+/* Cấu hình MathJax tự động ngắt dòng */
+mjx-container[display="true"] {
+    display: block !important;
+    text-align: center;
+    margin: 1em 0 !important;
+    padding: 0.5em 0;
+}
+
+/* Đảm bảo công thức không đè lên viền của các khung Admonition */
+.md-typeset .admonition, .md-typeset details {
+    overflow-x: auto !important;
+}
+
+/* Mẹo nhỏ: Thu nhỏ công thức một chút trên màn hình điện thoại cực nhỏ */
+@media screen and (max-width: 480px) {
+    mjx-container {
+        font-size: 110% !important; /* Giảm nhẹ so với mức 125% thầy đang để */
+    }
 }

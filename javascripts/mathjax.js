@@ -8,12 +8,21 @@ window.MathJax = {
   options: {
     ignoreHtmlClass: ".*|",
     processHtmlClass: "arithmatex"
+  },
+  chtml: {
+    scale: 1,                      // Tỷ lệ chung
+    minScale: 0.5,                 // Không thu nhỏ quá 50%
+    matchFontHeight: true,
+    displayAlign: 'center',
+    linebreaks: {                  // Bật tính năng ngắt dòng
+      automatic: true,
+      width: 'container'
+    }
+  },
+  svg: {
+    linebreaks: { 
+      automatic: true, 
+      width: 'container' 
+    }
   }
 };
-
-document$.subscribe(() => {
-  MathJax.startup.output.clearCache()
-  MathJax.typesetClear()
-  MathJax.texReset()
-  MathJax.typesetPromise()
-})
