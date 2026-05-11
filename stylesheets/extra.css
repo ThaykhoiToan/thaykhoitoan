@@ -1,0 +1,19 @@
+/* Phóng to cỡ chữ cho toàn bộ nội dung bài giảng */
+:root {
+  --md-typeset-font-size: 1.1rem; /* Cỡ chữ mặc định (thầy có thể tăng lên 1.2rem nếu muốn to hơn) */
+}
+
+/* Căn chỉnh riêng cho đoạn văn và danh sách để dễ đọc trên điện thoại */
+.md-typeset p, .md-typeset li {
+  font-size: 1.1rem;
+  line-height: 1.7; /* Tăng khoảng cách dòng cho thoáng bài giảng */
+}
+
+/* Tùy chỉnh font chữ cho tiêu đề nếu thầy muốn */
+.md-typeset h1 { font-size: 1.8rem; }
+.md-typeset h2 { font-size: 1.5rem; }
+
+/* Nếu công thức toán vẫn quá to, thầy có thể thu nhỏ MathJax một chút */
+.MathJax {
+  font-size: 100% !important; /* Thầy có thể chỉnh 95% nếu muốn công thức nhỏ lại bớt */
+}

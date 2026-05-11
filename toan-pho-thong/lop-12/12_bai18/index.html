@@ -1,0 +1,2956 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../..">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Bài 18. Xác suất có điều kiện - Phu Nhuan Math Hub</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Phu Nhuan Math Hub" class="md-header__button md-logo" aria-label="Phu Nhuan Math Hub" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Phu Nhuan Math Hub
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Bài 18. Xác suất có điều kiện
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Phu Nhuan Math Hub" class="md-nav__button md-logo" aria-label="Phu Nhuan Math Hub" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Phu Nhuan Math Hub
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trang chủ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TOÁN PHỔ THÔNG
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    TOÁN PHỔ THÔNG
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LỚP 10
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    LỚP 10
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lop-10/10_bai1.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 1. Mệnh đề
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lop-10/10_bai2.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 2. Tập hợp và các phép toán trên tập hợp
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lop-10/10_bai3.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 3. Bất phương trình bậc nhất hai ẩn
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lop-10/10_bai4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 4. Hệ bất phương trình bậc nhất hai ẩn
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lop-10/10_bai5.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 5. Giá trị lượng giác từ 0° đến 180°
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lop-10/10_bai6.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 6. Hệ thức lượng trong tam giác
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lop-10/10_bai7.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 7. Các khái niệm mở đầu
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lop-10/10_bai8.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 8. Tổng và hiệu của hai vectơ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lop-10/10_bai9.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 9. Tích của một vectơ với một số
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lop-10/10_bai10.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 10. Vectơ trong mặt phẳng toạ độ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lop-10/10_bai11.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 11. Tích vô hướng của hai vectơ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lop-10/10_bai12.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 12. Số gần đúng và sai số
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lop-10/10_bai13.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 13. Các số đặc trưng đo xu thế trung tâm
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lop-10/10_bai14.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 14. Các số đặc trưng đo độ phân tán
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lop-10/10_bai15.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 15. Hàm số
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lop-10/10_bai16.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 16. Hàm số bậc hai
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lop-10/10_bai17.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 17. Dấu của tam thức bậc hai
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lop-10/10_bai18.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 18. Phương trình quy về bậc hai
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lop-10/10_bai19.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 19. Phương trình đường thẳng
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lop-10/10_bai20.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 20. Đường thẳng trong mặt phẳng toạ độ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lop-10/10_bai21.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 21. Đường tròn trong mặt phẳng toạ độ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lop-10/10_bai22.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 22. Ba đường conic
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lop-10/10_bai23.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 23. Quy tắc đếm
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lop-10/10_bai24.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 24. Hoán vị, chỉnh hợp và tổ hợp
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lop-10/10_bai25.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 25. Nhị thức Newton
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lop-10/10_bai26.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 26. Biến cố và định nghĩa xác suất
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lop-10/10_bai27.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 27. Thực hành tính xác suất
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LỚP 11
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    LỚP 11
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lop-11/11_bai1.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 1. Giá trị lượng giác của góc lượng giác
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lop-11/11_bai2.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 2. Công thức lượng giác
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lop-11/11_bai3.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 3. Hàm số lượng giác
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lop-11/11_bai4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 4. Phương trình lượng giác cơ bản
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lop-11/11_bai5.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 5. Dãy số
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lop-11/11_bai6.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 6. Cấp số cộng
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lop-11/11_bai7.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 7. Cấp số nhân
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lop-11/11_bai8.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 8. Mẫu số liệu ghép nhóm
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lop-11/11_bai9.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 9. Các số đặc trưng đo xu thế trung tâm
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lop-11/11_bai10.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 10. Đường thẳng và mặt phẳng không gian
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lop-11/11_bai11.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 11. Hai đường thẳng song song
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lop-11/11_bai12.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 12. Đường thẳng và mặt phẳng song song
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lop-11/11_bai13.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 13. Hai mặt phẳng song song
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lop-11/11_bai14.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 14. Phép chiếu song song
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lop-11/11_bai15.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 15. Giới hạn của dãy số
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lop-11/11_bai16.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 16. Giới hạn của hàm số
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lop-11/11_bai17.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 17. Hàm số liên tục
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lop-11/11_bai18.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 18. Luỹ thừa với số mũ thực
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lop-11/11_bai19.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 19. Lôgarit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lop-11/11_bai20.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 20. Hàm số mũ và lôgarit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lop-11/11_bai21.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 21. PT, BPT mũ và lôgarit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lop-11/11_bai22.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 22. Hai đường thẳng vuông góc
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lop-11/11_bai23.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 23. Đường thẳng vuông góc với mặt phẳng
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lop-11/11_bai24.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 24. Góc giữa đường thẳng và mặt phẳng
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lop-11/11_bai25.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 25. Hai mặt phẳng vuông góc
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lop-11/11_bai26.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 26. Khoảng cách
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lop-11/11_bai27.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 27. Thể tích
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lop-11/11_bai28.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 28. Biến cố hợp, giao, độc lập
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lop-11/11_bai29.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 29. Công thức cộng xác suất
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lop-11/11_bai30.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 30. Công thức nhân xác suất
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lop-11/11_bai31.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 31. Ý nghĩa của đạo hàm
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lop-11/11_bai32.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 32. Các quy tắc tính đạo hàm
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lop-11/11_bai33.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 33. Đạo hàm cấp hai
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LỚP 12
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    LỚP 12
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12_bai1.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 1. Tính đơn điệu và cực trị
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12_bai2.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 2. Giá trị lớn nhất và nhỏ nhất
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12_bai3.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 3. Đường tiệm cận
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12_bai4.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 4. Khảo sát và vẽ đồ thị hàm số
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12_bai5.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 5. Ứng dụng đạo hàm thực tế
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12_bai6.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 6. Vectơ trong không gian
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12_bai7.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 7. Hệ trục toạ độ trong không gian
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12_bai8.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 8. Biểu thức toạ độ của vectơ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12_bai9.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 9. Khoảng biến thiên và tứ phân vị
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12_bai10.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 10. Phương sai và độ lệch chuẩn
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12_bai11.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 11. Nguyên hàm
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12_bai12.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 12. Tích phân
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12_bai13.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 13. Ứng dụng hình học của tích phân
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12_bai14.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 14. Phương trình mặt phẳng
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12_bai15.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 15. Phương trình đường thẳng
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12_bai16.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 16. Công thức tính góc
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12_bai17.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 17. Phương trình mặt cầu
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 18. Xác suất có điều kiện
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12_bai19.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bài 19. Xác suất toàn phần và Bayes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TOÁN CAO CẤP
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    TOÁN CAO CẤP
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../toan-cao-cap/calculus.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Giải tích đại cương
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 style="color: #1565c0; text-align: center; margin-bottom: 30px;">Bài 18: Xác suất có điều kiện</h1>
+
+<h2 style="color: #2e7d32; border-bottom: 2px solid #2e7d32; padding-bottom: 5px;">I. LÝ THUYẾT</h2>
+
+<div class="admonition info">
+<p class="admonition-title">1. Định nghĩa xác suất có điều kiện</p>
+<p>Cho hai biến cố <span class="arithmatex">\(A\)</span> và <span class="arithmatex">\(B\)</span>.</p>
+<p>Xác suất của biến cố <span class="arithmatex">\(A\)</span> với điều kiện biến cố <span class="arithmatex">\(B\)</span> đã xảy ra được gọi là xác suất của <span class="arithmatex">\(A\)</span> với điều kiện <span class="arithmatex">\(B\)</span>.</p>
+<p>Kí hiệu: <span class="arithmatex">\(P(A|B)\)</span>.</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">2. Công thức tính xác suất có điều kiện</p>
+<p>Cho hai biến cố <span class="arithmatex">\(A\)</span> và <span class="arithmatex">\(B\)</span> trong đó <span class="arithmatex">\(P(B)&gt;0\)</span> khi đó:</p>
+<div class="arithmatex">\[P(A|B) = \dfrac{P(A \cap B)}{P(B)}\]</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nhận xét</p>
+<p>+) Nếu <span class="arithmatex">\(P(B)&gt;0\)</span> thì <span class="arithmatex">\(P(A \cap B) = P(B).P(A|B)\)</span></p>
+<p>+) Nếu <span class="arithmatex">\(A\)</span> và <span class="arithmatex">\(B\)</span> là hai biến cố bất kì thì: <span class="arithmatex">\(P(A \cap B) = P(A).P(B|A) = P(B).P(A|B)\)</span>.</p>
+<p>+) Cho <span class="arithmatex">\(A\)</span> và <span class="arithmatex">\(B\)</span> là hai biến cố với <span class="arithmatex">\(P(B)&gt;0\)</span>. Khi đó, ta có: 
+$<span class="arithmatex">\(P(A|B) = \dfrac{n(A \cap B)}{n(B)}\)</span>$
+Trong đó: <span class="arithmatex">\(n(A \cap B)\)</span> là số các trường hợp thuận lợi của <span class="arithmatex">\((A \cap B)\)</span>;
+<span class="arithmatex">\(n(B)\)</span> là số các trường hợp thuận lợi của <span class="arithmatex">\(B\)</span>.</p>
+<p>+) Cho <span class="arithmatex">\(A\)</span> và <span class="arithmatex">\(B\)</span> là hai biến cố với <span class="arithmatex">\(0 &lt; P(A) &lt; 1; 0 &lt; P(B) &lt; 1\)</span>.
+Khi đó, <span class="arithmatex">\(A\)</span> và <span class="arithmatex">\(B\)</span> là hai biến cố độc lập khi và chỉ khi: <span class="arithmatex">\(P(A) = P(A|B) = P(A|\overline{B})\)</span> và <span class="arithmatex">\(P(B) = P(B|A) = P(B|\overline{A})\)</span></p>
+<p>+) Nếu <span class="arithmatex">\(A\)</span> và <span class="arithmatex">\(B\)</span> là hai biến cố bất kì, với <span class="arithmatex">\(P(B)&gt;0\)</span> thì: <span class="arithmatex">\(P(\overline{A}|B) = 1 - P(A|B)\)</span></p>
+</div>
+<p><br></p>
+<h2 style="color: #2e7d32; border-bottom: 2px solid #2e7d32; padding-bottom: 5px; margin-top: 20px;">II. BÀI TẬP VÍ DỤ</h2>
+
+<div class="admonition example">
+<p class="admonition-title">Câu 1</p>
+<p>Cho <span class="arithmatex">\(P(A)=0,5; P(B)=0,6; P(B|A)=0,9\)</span>. Tính <span class="arithmatex">\(P(A|B)\)</span>.</p>
+<p><strong style="color: #d32f2f;">Lời giải:</strong></p>
+<p>Theo công thức nhân xác suất, ta có: <span class="arithmatex">\(P(AB) = P(A)P(B|A) = 0,5 . 0,9 = 0,45\)</span>.</p>
+<p>Vậy <span class="arithmatex">\(P(A|B) = \dfrac{P(AB)}{P(B)} = \dfrac{0,45}{0,6} = 0,75\)</span>.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Câu 2</p>
+<p>Cho <span class="arithmatex">\(P(A)=\dfrac{2}{5}; P(B)=\dfrac{1}{3}; P(A \cup B)=\dfrac{1}{2}\)</span>. Tính <span class="arithmatex">\(P(A|B)\)</span> và <span class="arithmatex">\(P(B|A)\)</span>.</p>
+<p><strong style="color: #d32f2f;">Lời giải:</strong></p>
+<p>Ta có: <span class="arithmatex">\(P(AB) = P(A) + P(B) - P(A \cup B) = \dfrac{2}{5} + \dfrac{1}{3} - \dfrac{1}{2} = \dfrac{7}{30}\)</span>.</p>
+<p>Từ đó: 
+<ul style="margin-top: 5px;">
+    <li><span class="arithmatex">\(P(A|B) = \dfrac{P(AB)}{P(B)} = \dfrac{\dfrac{7}{30}}{\dfrac{1}{3}} = \dfrac{7}{10}\)</span></li>
+    <li><span class="arithmatex">\(P(B|A) = \dfrac{P(AB)}{P(A)} = \dfrac{\dfrac{7}{30}}{\dfrac{2}{5}} = \dfrac{7}{12}\)</span></li>
+</ul></p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Câu 3</p>
+<p>Cho hai biến cố <span class="arithmatex">\(A, B\)</span> với <span class="arithmatex">\(P(B)=0,6; P(A|B)=0,7\)</span> và <span class="arithmatex">\(P(A|\overline{B})=0,4\)</span>. Tính <span class="arithmatex">\(P(A)\)</span>.</p>
+<p><strong style="color: #d32f2f;">Lời giải:</strong></p>
+<p>Ta có: <span class="arithmatex">\(P(\overline{B}) = 1 - P(B) = 1 - 0,6 = 0,4\)</span>.</p>
+<p>Theo công thức xác suất toàn phần, ta có:
+$<span class="arithmatex">\(P(A) = P(B).P(A|B) + P(\overline{B}).P(A|\overline{B}) = 0,6 . 0,7 + 0,4 . 0,4 = 0,58\)</span>$</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Câu 4</p>
+<p>Trong một hộp có 3 viên bi xanh và 2 viên bi đỏ. Lấy lần lượt từng viên bi không hoàn lại.
+Gọi <span class="arithmatex">\(A\)</span> là biến cố "Viên bi thứ nhất là bi xanh", <span class="arithmatex">\(B\)</span> là biến cố "Viên bi thứ hai là bi đỏ".
+Tính <span class="arithmatex">\(P(A), P(B|A)\)</span> và <span class="arithmatex">\(P(AB)\)</span>.</p>
+<p><strong style="color: #d32f2f;">Lời giải:</strong></p>
+<ul>
+<li>Xác suất lấy được bi xanh ở lần thứ nhất: <span class="arithmatex">\(P(A) = \dfrac{3}{5}\)</span>.</li>
+<li>Sau khi biến cố <span class="arithmatex">\(A\)</span> xảy ra (đã lấy 1 bi xanh), trong hộp còn lại 4 viên bi (2 xanh, 2 đỏ). 
+  Xác suất lấy bi đỏ ở lần thứ hai: <span class="arithmatex">\(P(B|A) = \dfrac{2}{4} = \dfrac{1}{2}\)</span>.</li>
+<li>Xác suất để lần một xanh và lần hai đỏ: 
+  <span class="arithmatex">\(P(AB) = P(A) \cdot P(B|A) = \dfrac{3}{5} \cdot \dfrac{1}{2} = \dfrac{3}{10}\)</span>.</li>
+</ul>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Câu 5</p>
+<p>Một lớp học có 40 học sinh gồm 25 nam và 15 nữ. Chọn ngẫu nhiên 2 học sinh từ lớp. 
+Tính xác suất để cả 2 học sinh được chọn đều là nam, biết rằng trong 2 học sinh đó có ít nhất một học sinh nam.</p>
+<p><strong style="color: #d32f2f;">Lời giải:</strong></p>
+<ul>
+<li>Số cách chọn 2 học sinh bất kì: <span class="arithmatex">\(n(\Omega) = C_{40}^2 = 780\)</span>.</li>
+<li>Gọi <span class="arithmatex">\(B\)</span> là biến cố "Có ít nhất một học sinh nam". Biến cố đối <span class="arithmatex">\(\overline{B}\)</span> là "Không có học sinh nam nào" (chọn 2 nữ).
+  <span class="arithmatex">\(n(\overline{B}) = C_{15}^2 = 105 \Rightarrow P(B) = 1 - \dfrac{105}{780} = \dfrac{675}{780}\)</span>.</li>
+<li>Gọi <span class="arithmatex">\(A\)</span> là biến cố "Cả 2 học sinh đều là nam". Vì <span class="arithmatex">\(A \subset B\)</span> nên <span class="arithmatex">\(A \cap B = A\)</span>.
+  <span class="arithmatex">\(n(A) = C_{25}^2 = 300 \Rightarrow P(A \cap B) = \dfrac{300}{780}\)</span>.</li>
+<li>Xác suất cần tìm: <span class="arithmatex">\(P(A|B) = \dfrac{P(A \cap B)}{P(B)} = \dfrac{300}{675} = \dfrac{4}{9}\)</span>.</li>
+</ul>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Câu 6</p>
+<p>Một cặp vợ chồng có 2 người con. Biết rằng trong đó có ít nhất một đứa con trai. 
+Tính xác suất để cặp vợ chồng đó có 2 đứa con trai (Giả sử xác suất sinh con trai và con gái là như nhau).</p>
+<p><strong style="color: #d32f2f;">Lời giải:</strong></p>
+<p>Kí hiệu <span class="arithmatex">\(T\)</span> là trai, <span class="arithmatex">\(G\)</span> là gái. Không gian mẫu: <span class="arithmatex">\(\Omega = \{TT, TG, GT, GG\}\)</span>.
+* Gọi <span class="arithmatex">\(B\)</span> là biến cố "Có ít nhất một con trai": <span class="arithmatex">\(B = \{TT, TG, GT\} \Rightarrow n(B) = 3\)</span>.
+* Gọi <span class="arithmatex">\(A\)</span> là biến cố "Có hai con trai": <span class="arithmatex">\(A = \{TT\}\)</span>. 
+* Tập giao <span class="arithmatex">\(A \cap B = \{TT\} \Rightarrow n(A \cap B) = 1\)</span>.
+* Xác suất để có 2 con trai khi biết đã có ít nhất một đứa trai:
+  <span class="arithmatex">\(P(A|B) = \dfrac{n(A \cap B)}{n(B)} = \dfrac{1}{3}\)</span>.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Câu 7</p>
+<p>Một máy bay có 2 động cơ I và II hoạt động độc lập. Xác suất để động cơ I và II chạy tốt lần lượt là <span class="arithmatex">\(0,8\)</span> và <span class="arithmatex">\(0,7\)</span>.
+Biết rằng máy bay bay an toàn khi có ít nhất một động cơ chạy tốt. Tính xác suất máy bay bay an toàn.</p>
+<p><strong style="color: #d32f2f;">Lời giải:</strong></p>
+<ul>
+<li>Gọi <span class="arithmatex">\(E_1\)</span> là biến cố "Động cơ I chạy tốt": <span class="arithmatex">\(P(E_1) = 0,8\)</span>.</li>
+<li>Gọi <span class="arithmatex">\(E_2\)</span> là biến cố "Động cơ II chạy tốt": <span class="arithmatex">\(P(E_2) = 0,7\)</span>.</li>
+<li>Máy bay <strong>không</strong> an toàn khi cả hai động cơ đều hỏng: <span class="arithmatex">\(P(\overline{E_1} \cap \overline{E_2}) = 0,2 \cdot 0,3 = 0,06\)</span>.</li>
+<li>Xác suất máy bay bay an toàn: <span class="arithmatex">\(P(\text{An toàn}) = 1 - 0,06 = 0,94\)</span>.</li>
+</ul>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Câu 8</p>
+<p>Một xạ thủ bắn 2 viên đạn vào mục tiêu. Xác suất bắn trúng của viên thứ nhất và viên thứ hai lần lượt là <span class="arithmatex">\(0,7\)</span> và <span class="arithmatex">\(0,8\)</span>.
+Biết rằng có đúng một viên trúng mục tiêu, tính xác suất để viên thứ nhất đã trúng mục tiêu.</p>
+<p><strong style="color: #d32f2f;">Lời giải:</strong></p>
+<ul>
+<li>Gọi <span class="arithmatex">\(X_1, X_2\)</span> lần lượt là các biến cố viên thứ nhất và thứ hai trúng mục tiêu.</li>
+<li>Gọi <span class="arithmatex">\(B\)</span> là biến cố "Có đúng một viên trúng": <span class="arithmatex">\(B = (X_1 \cap \overline{X_2}) \cup (\overline{X_1} \cap X_2)\)</span>.
+  <span class="arithmatex">\(P(B) = 0,7 \cdot 0,2 + 0,3 \cdot 0,8 = 0,14 + 0,24 = 0,38\)</span>.</li>
+<li>Gọi <span class="arithmatex">\(A\)</span> là biến cố "Viên thứ nhất trúng". Khi đó <span class="arithmatex">\(A \cap B\)</span> là biến cố "Viên 1 trúng và viên 2 trượt".
+  <span class="arithmatex">\(P(A \cap B) = 0,7 \cdot 0,2 = 0,14\)</span>.</li>
+<li>Xác suất cần tìm: <span class="arithmatex">\(P(A|B) = \dfrac{0,14}{0,38} = \dfrac{7}{19} \approx 0,368\)</span>.</li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
