@@ -1,11 +1,11 @@
 /* Phóng to cỡ chữ cho toàn bộ nội dung bài giảng */
 :root {
-  --md-typeset-font-size: 1.1rem; /* Cỡ chữ mặc định (thầy có thể tăng lên 1.2rem nếu muốn to hơn) */
+  --md-typeset-font-size: 1.0rem; /* Cỡ chữ mặc định (thầy có thể tăng lên 1.2rem nếu muốn to hơn) */
 }
 
 /* Căn chỉnh riêng cho đoạn văn và danh sách để dễ đọc trên điện thoại */
 .md-typeset p, .md-typeset li {
-  font-size: 1.1rem;
+  font-size: 1.0rem;
   line-height: 1.7; /* Tăng khoảng cách dòng cho thoáng bài giảng */
 }
 
@@ -15,7 +15,7 @@
 
 /* Tăng tỷ lệ hiển thị cho toàn bộ công thức Toán */
 mjx-container {
-  font-size: 125% !important; /* Thầy có thể tăng lên 130% nếu muốn to hơn nữa */
+  font-size: 100% !important; /* Thầy có thể tăng lên 130% nếu muốn to hơn nữa */
   color: inherit;
 }
 
