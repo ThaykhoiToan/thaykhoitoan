@@ -13,7 +13,14 @@
 .md-typeset h1 { font-size: 1.8rem; }
 .md-typeset h2 { font-size: 1.5rem; }
 
-/* Nếu công thức toán vẫn quá to, thầy có thể thu nhỏ MathJax một chút */
-.MathJax {
-  font-size: 100% !important; /* Thầy có thể chỉnh 95% nếu muốn công thức nhỏ lại bớt */
+/* Tăng tỷ lệ hiển thị cho toàn bộ công thức Toán */
+mjx-container {
+  font-size: 125% !important; /* Thầy có thể tăng lên 130% nếu muốn to hơn nữa */
+  color: inherit;
+}
+
+/* Căn chỉnh riêng cho công thức nằm trên cùng một dòng với văn bản */
+mjx-container[inline] {
+  margin-left: 0.25em;
+  margin-right: 0.25em;
 }
